@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,16 +12,24 @@
 		0480578022FC069100E70AFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0480577E22FC069100E70AFB /* Main.storyboard */; };
 		0480578222FC069300E70AFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0480578122FC069300E70AFB /* Assets.xcassets */; };
 		0480578522FC069300E70AFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0480578322FC069300E70AFB /* LaunchScreen.storyboard */; };
+		0480579322FC1BC500E70AFB /* rswift in Resources */ = {isa = PBXBuildFile; fileRef = 0480579222FC1BC500E70AFB /* rswift */; };
+		0480579722FC1BF400E70AFB /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480579522FC1BF400E70AFB /* Socket.framework */; };
+		0480579822FC1BF400E70AFB /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480579622FC1BF400E70AFB /* Rswift.framework */; };
+		0480579C22FC1FF500E70AFB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480579B22FC1FF500E70AFB /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0480577722FC069100E70AFB /* UDPNetworkConnectionSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UDPNetworkConnectionSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0480577A22FC069100E70AFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0480577C22FC069100E70AFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0480577C22FC069100E70AFB /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		0480577F22FC069100E70AFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0480578122FC069300E70AFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0480578422FC069300E70AFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0480578622FC069300E70AFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0480579222FC1BC500E70AFB /* rswift */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = rswift; sourceTree = "<group>"; };
+		0480579522FC1BF400E70AFB /* Socket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Socket.framework; path = Carthage/Build/iOS/Socket.framework; sourceTree = "<group>"; };
+		0480579622FC1BF400E70AFB /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
+		0480579B22FC1FF500E70AFB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0480579722FC1BF400E70AFB /* Socket.framework in Frameworks */,
+				0480579822FC1BF400E70AFB /* Rswift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +50,7 @@
 			children = (
 				0480577922FC069100E70AFB /* UDPNetworkConnectionSample */,
 				0480577822FC069100E70AFB /* Products */,
+				0480579422FC1BF400E70AFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,10 +101,29 @@
 		0480579022FC0A2E00E70AFB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0480579122FC1BBB00E70AFB /* Rswift */,
 				0480578122FC069300E70AFB /* Assets.xcassets */,
 				0480578322FC069300E70AFB /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		0480579122FC1BBB00E70AFB /* Rswift */ = {
+			isa = PBXGroup;
+			children = (
+				0480579B22FC1FF500E70AFB /* R.generated.swift */,
+				0480579222FC1BC500E70AFB /* rswift */,
+			);
+			path = Rswift;
+			sourceTree = "<group>";
+		};
+		0480579422FC1BF400E70AFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0480579622FC1BF400E70AFB /* Rswift.framework */,
+				0480579522FC1BF400E70AFB /* Socket.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +133,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0480578922FC069300E70AFB /* Build configuration list for PBXNativeTarget "UDPNetworkConnectionSample" */;
 			buildPhases = (
+				0480579A22FC1C6100E70AFB /* Rswift */,
 				0480577322FC069100E70AFB /* Sources */,
 				0480577422FC069100E70AFB /* Frameworks */,
 				0480577522FC069100E70AFB /* Resources */,
+				0480579922FC1BFF00E70AFB /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -155,12 +187,57 @@
 			buildActionMask = 2147483647;
 			files = (
 				0480578522FC069300E70AFB /* LaunchScreen.storyboard in Resources */,
+				0480579322FC1BC500E70AFB /* rswift in Resources */,
 				0480578222FC069300E70AFB /* Assets.xcassets in Resources */,
 				0480578022FC069100E70AFB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0480579922FC1BFF00E70AFB /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Socket.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		0480579A22FC1C6100E70AFB /* Rswift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = Rswift;
+			outputFileListPaths = (
+				"",
+			);
+			outputPaths = (
+				$SRCROOT/$PRODUCT_NAME/Resources/Rswift/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/$PRODUCT_NAME/Resources/Rswift/rswift\" generate \"$SRCROOT/$PRODUCT_NAME/Resources/Rswift/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0480577322FC069100E70AFB /* Sources */ = {
@@ -169,6 +246,7 @@
 			files = (
 				0480577D22FC069100E70AFB /* ViewController.swift in Sources */,
 				0480577B22FC069100E70AFB /* AppDelegate.swift in Sources */,
+				0480579C22FC1FF500E70AFB /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +394,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/UDPNetworkConnectionSample/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -336,6 +418,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/UDPNetworkConnectionSample/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
