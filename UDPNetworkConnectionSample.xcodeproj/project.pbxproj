@@ -18,6 +18,9 @@
 		04738CD022FD216E0036A0B9 /* ConnectionTestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04738CCF22FD216E0036A0B9 /* ConnectionTestViewController.storyboard */; };
 		04738CD222FD33B00036A0B9 /* ConnectionLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04738CD122FD33B00036A0B9 /* ConnectionLogTableViewCell.swift */; };
 		04738CD422FD36120036A0B9 /* ConnectionLogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04738CD322FD36120036A0B9 /* ConnectionLogTableViewCell.xib */; };
+		04738CD722FD39FF0036A0B9 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04738CD622FD39FF0036A0B9 /* UserDefaultManager.swift */; };
+		04738CDA22FD40AE0036A0B9 /* EchoServerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04738CD922FD40AE0036A0B9 /* EchoServerService.swift */; };
+		04738CDC22FD4CFC0036A0B9 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04738CDB22FD4CFC0036A0B9 /* UIColor+.swift */; };
 		0480577B22FC069100E70AFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480577A22FC069100E70AFB /* AppDelegate.swift */; };
 		0480577D22FC069100E70AFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480577C22FC069100E70AFB /* ViewController.swift */; };
 		0480578022FC069100E70AFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0480577E22FC069100E70AFB /* Main.storyboard */; };
@@ -42,6 +45,9 @@
 		04738CCF22FD216E0036A0B9 /* ConnectionTestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConnectionTestViewController.storyboard; sourceTree = "<group>"; };
 		04738CD122FD33B00036A0B9 /* ConnectionLogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLogTableViewCell.swift; sourceTree = "<group>"; };
 		04738CD322FD36120036A0B9 /* ConnectionLogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectionLogTableViewCell.xib; sourceTree = "<group>"; };
+		04738CD622FD39FF0036A0B9 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		04738CD922FD40AE0036A0B9 /* EchoServerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoServerService.swift; sourceTree = "<group>"; };
+		04738CDB22FD4CFC0036A0B9 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		0480577722FC069100E70AFB /* UDPNetworkConnectionSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UDPNetworkConnectionSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0480577A22FC069100E70AFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0480577C22FC069100E70AFB /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
@@ -81,6 +87,22 @@
 				04738CD322FD36120036A0B9 /* ConnectionLogTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		04738CD522FD39E50036A0B9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				04738CD622FD39FF0036A0B9 /* UserDefaultManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		04738CD822FD409F0036A0B9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				04738CD922FD40AE0036A0B9 /* EchoServerService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		0480576E22FC069100E70AFB = {
@@ -174,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				0480579E22FC217F00E70AFB /* Extensions */,
+				04738CD522FD39E50036A0B9 /* Manager */,
+				04738CD822FD409F0036A0B9 /* Service */,
 				0480579F22FC219000E70AFB /* Constants.swift */,
 			);
 			path = Util;
@@ -182,6 +206,7 @@
 		0480579E22FC217F00E70AFB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				04738CDB22FD4CFC0036A0B9 /* UIColor+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -314,9 +339,12 @@
 				0480577B22FC069100E70AFB /* AppDelegate.swift in Sources */,
 				0480579C22FC1FF500E70AFB /* R.generated.swift in Sources */,
 				04738CD222FD33B00036A0B9 /* ConnectionLogTableViewCell.swift in Sources */,
+				04738CDA22FD40AE0036A0B9 /* EchoServerService.swift in Sources */,
 				04738CC622FCFFD30036A0B9 /* BaseTableViewCellProtocol.swift in Sources */,
 				04738CBD22FCFAF60036A0B9 /* SettingsViewController.swift in Sources */,
+				04738CD722FD39FF0036A0B9 /* UserDefaultManager.swift in Sources */,
 				04738CCA22FD02140036A0B9 /* SettingsControlsTableViewCell.swift in Sources */,
+				04738CDC22FD4CFC0036A0B9 /* UIColor+.swift in Sources */,
 				04738CCE22FD210D0036A0B9 /* ConnectionTestViewController.swift in Sources */,
 				048057A022FC219000E70AFB /* Constants.swift in Sources */,
 			);
