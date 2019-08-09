@@ -29,6 +29,10 @@ final class ViewController: UIViewController {
       case .settings: return "接続先の設定などを行います"
       }
     }
+
+    static func get(indexPath: IndexPath) -> TableData {
+      return allCases[indexPath.row]
+    }
   }
 
   // MARK: - Outlet
@@ -71,7 +75,7 @@ extension ViewController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else { return UITableViewCell() }
-    let tableData = TableData.allCases[indexPath.row]
+    let tableData = TableData.get(indexPath: indexPath)
     cell.textLabel?.text = tableData.title
     cell.detailTextLabel?.text = tableData.detail
     return cell
@@ -82,12 +86,14 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let tableData = TableData.allCases[indexPath.row]
+    let tableData = TableData.get(indexPath: indexPath)
     switch tableData {
     case .connectionTest:
       break
     case .settings:
-      break
+      if let viewController = R.storyboard.settingsViewController().instantiateInitialViewController() {
+        navigationController?.pushViewController(viewController, animated: true)
+      }
     }
   }
 }

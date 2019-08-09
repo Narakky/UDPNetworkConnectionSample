@@ -30,6 +30,36 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
+  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  struct nib {
+    /// Nib `SettingsControlsTableViewCell`.
+    static let settingsControlsTableViewCell = _R.nib._SettingsControlsTableViewCell()
+    /// Nib `SettingsInputTableViewCell`.
+    static let settingsInputTableViewCell = _R.nib._SettingsInputTableViewCell()
+    
+    /// `UINib(name: "SettingsControlsTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.settingsControlsTableViewCell) instead")
+    static func settingsControlsTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.settingsControlsTableViewCell)
+    }
+    
+    /// `UINib(name: "SettingsInputTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.settingsInputTableViewCell) instead")
+    static func settingsInputTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.settingsInputTableViewCell)
+    }
+    
+    static func settingsControlsTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SettingsControlsTableViewCell? {
+      return R.nib.settingsControlsTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SettingsControlsTableViewCell
+    }
+    
+    static func settingsInputTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SettingsInputTableViewCell? {
+      return R.nib.settingsInputTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SettingsInputTableViewCell
+    }
+    
+    fileprivate init() {}
+  }
+  
   /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `cell`.
@@ -38,12 +68,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
+    /// Storyboard `SettingsViewController`.
+    static let settingsViewController = _R.storyboard.settingsViewController()
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
@@ -53,6 +85,11 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "Main", bundle: ...)`
     static func main(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.main)
+    }
+    
+    /// `UIStoryboard(name: "SettingsViewController", bundle: ...)`
+    static func settingsViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.settingsViewController)
     }
     
     fileprivate init() {}
@@ -76,10 +113,37 @@ struct _R: Rswift.Validatable {
     try storyboard.validate()
   }
   
+  struct nib {
+    struct _SettingsControlsTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "SettingsControlsTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SettingsControlsTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SettingsControlsTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _SettingsInputTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "SettingsInputTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SettingsInputTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? SettingsInputTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    fileprivate init() {}
+  }
+  
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       try launchScreen.validate()
       try main.validate()
+      try settingsViewController.validate()
     }
     
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
@@ -101,6 +165,20 @@ struct _R: Rswift.Validatable {
       
       let bundle = R.hostingBundle
       let name = "Main"
+      
+      static func validate() throws {
+        if #available(iOS 11.0, *) {
+        }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct settingsViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = SettingsViewController
+      
+      let bundle = R.hostingBundle
+      let name = "SettingsViewController"
       
       static func validate() throws {
         if #available(iOS 11.0, *) {
