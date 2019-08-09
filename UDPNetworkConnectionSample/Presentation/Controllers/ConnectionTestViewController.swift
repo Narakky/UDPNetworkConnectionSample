@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Socket
 
 final class ConnectionTestViewController: UIViewController {
   // MARK: - Definitions
@@ -76,6 +77,7 @@ final class ConnectionTestViewController: UIViewController {
   private var hostname: String?
   private var portNumber: Int?
   private var server: EchoServerService?
+  private var socket: Socket?
 
   // MARK: - Lifecycle
 
@@ -97,15 +99,42 @@ final class ConnectionTestViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
 
-//    server?.run()
-    print("Swift Echo Server Sample")
-    print("Connect with a command line window by entering 'telnet ::1 \(String(describing: portNumber))'")
+    if let hostname = hostname, let portNumber = portNumber {
+      DispatchQueue.global().async { [weak self] in
+        guard let `self` = self else { return }
+        do {
+          self.socket = try Socket.create()
+          try self.socket?.listen(on: portNumber)
+//          try self.socket?.connect(to: hostname, port: port, timeout: 30, familyOnly: false)
+          self.changeStatus(status: .connecting)
+        } catch {
+          print("connection error occured...")
+          self.changeStatus(status: .error)
+        }
+
+        if self.socket?.isListening == true {
+          self.changeStatus(status: .success)
+        }
+      }
+    }
+
+    Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+      guard let `self` = self else { return }
+      do {
+        let message = try self.socket?.readString() ?? ""
+        print("message: \(message)")
+      } catch {
+        print("readString error...")
+      }
+    }
   }
 
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
 
-//    server?.shutdownServer()
+    DispatchQueue.global().async { [weak self] in
+      self?.socket?.close()
+    }
   }
 }
 
@@ -131,9 +160,11 @@ private extension ConnectionTestViewController {
   }
 
   private func changeStatus(status: Status) {
-    statusLabel.text = status.text
-    statusLabel.textColor = status.textColor
-    statusLabel.backgroundColor = status.backgroundColor
+    DispatchQueue.main.async { [weak self] in
+      self?.statusLabel.text = status.text
+      self?.statusLabel.textColor = status.textColor
+      self?.statusLabel.backgroundColor = status.backgroundColor
+    }
   }
 }
 
