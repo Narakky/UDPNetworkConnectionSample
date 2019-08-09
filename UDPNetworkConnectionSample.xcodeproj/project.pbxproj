@@ -14,6 +14,10 @@
 		04738CC822FD00DB0036A0B9 /* SettingsInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04738CC722FD00DB0036A0B9 /* SettingsInputTableViewCell.xib */; };
 		04738CCA22FD02140036A0B9 /* SettingsControlsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04738CC922FD02140036A0B9 /* SettingsControlsTableViewCell.swift */; };
 		04738CCC22FD025B0036A0B9 /* SettingsControlsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04738CCB22FD025B0036A0B9 /* SettingsControlsTableViewCell.xib */; };
+		04738CCE22FD210D0036A0B9 /* ConnectionTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04738CCD22FD210D0036A0B9 /* ConnectionTestViewController.swift */; };
+		04738CD022FD216E0036A0B9 /* ConnectionTestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04738CCF22FD216E0036A0B9 /* ConnectionTestViewController.storyboard */; };
+		04738CD222FD33B00036A0B9 /* ConnectionLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04738CD122FD33B00036A0B9 /* ConnectionLogTableViewCell.swift */; };
+		04738CD422FD36120036A0B9 /* ConnectionLogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04738CD322FD36120036A0B9 /* ConnectionLogTableViewCell.xib */; };
 		0480577B22FC069100E70AFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480577A22FC069100E70AFB /* AppDelegate.swift */; };
 		0480577D22FC069100E70AFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480577C22FC069100E70AFB /* ViewController.swift */; };
 		0480578022FC069100E70AFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0480577E22FC069100E70AFB /* Main.storyboard */; };
@@ -34,6 +38,10 @@
 		04738CC722FD00DB0036A0B9 /* SettingsInputTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsInputTableViewCell.xib; sourceTree = "<group>"; };
 		04738CC922FD02140036A0B9 /* SettingsControlsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsControlsTableViewCell.swift; sourceTree = "<group>"; };
 		04738CCB22FD025B0036A0B9 /* SettingsControlsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsControlsTableViewCell.xib; sourceTree = "<group>"; };
+		04738CCD22FD210D0036A0B9 /* ConnectionTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTestViewController.swift; sourceTree = "<group>"; };
+		04738CCF22FD216E0036A0B9 /* ConnectionTestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConnectionTestViewController.storyboard; sourceTree = "<group>"; };
+		04738CD122FD33B00036A0B9 /* ConnectionLogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLogTableViewCell.swift; sourceTree = "<group>"; };
+		04738CD322FD36120036A0B9 /* ConnectionLogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectionLogTableViewCell.xib; sourceTree = "<group>"; };
 		0480577722FC069100E70AFB /* UDPNetworkConnectionSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UDPNetworkConnectionSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0480577A22FC069100E70AFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0480577C22FC069100E70AFB /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
@@ -69,6 +77,8 @@
 				04738CC722FD00DB0036A0B9 /* SettingsInputTableViewCell.xib */,
 				04738CC922FD02140036A0B9 /* SettingsControlsTableViewCell.swift */,
 				04738CCB22FD025B0036A0B9 /* SettingsControlsTableViewCell.xib */,
+				04738CD122FD33B00036A0B9 /* ConnectionLogTableViewCell.swift */,
+				04738CD322FD36120036A0B9 /* ConnectionLogTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -124,6 +134,8 @@
 			children = (
 				0480577C22FC069100E70AFB /* ViewController.swift */,
 				0480577E22FC069100E70AFB /* Main.storyboard */,
+				04738CCD22FD210D0036A0B9 /* ConnectionTestViewController.swift */,
+				04738CCF22FD216E0036A0B9 /* ConnectionTestViewController.storyboard */,
 				04738CBC22FCFAF60036A0B9 /* SettingsViewController.swift */,
 				04738CBF22FCFC370036A0B9 /* SettingsViewController.storyboard */,
 			);
@@ -236,9 +248,11 @@
 			files = (
 				0480578522FC069300E70AFB /* LaunchScreen.storyboard in Resources */,
 				04738CC822FD00DB0036A0B9 /* SettingsInputTableViewCell.xib in Resources */,
+				04738CD422FD36120036A0B9 /* ConnectionLogTableViewCell.xib in Resources */,
 				0480579322FC1BC500E70AFB /* rswift in Resources */,
 				04738CC022FCFC370036A0B9 /* SettingsViewController.storyboard in Resources */,
 				0480578222FC069300E70AFB /* Assets.xcassets in Resources */,
+				04738CD022FD216E0036A0B9 /* ConnectionTestViewController.storyboard in Resources */,
 				04738CCC22FD025B0036A0B9 /* SettingsControlsTableViewCell.xib in Resources */,
 				0480578022FC069100E70AFB /* Main.storyboard in Resources */,
 			);
@@ -299,9 +313,11 @@
 				0480577D22FC069100E70AFB /* ViewController.swift in Sources */,
 				0480577B22FC069100E70AFB /* AppDelegate.swift in Sources */,
 				0480579C22FC1FF500E70AFB /* R.generated.swift in Sources */,
+				04738CD222FD33B00036A0B9 /* ConnectionLogTableViewCell.swift in Sources */,
 				04738CC622FCFFD30036A0B9 /* BaseTableViewCellProtocol.swift in Sources */,
 				04738CBD22FCFAF60036A0B9 /* SettingsViewController.swift in Sources */,
 				04738CCA22FD02140036A0B9 /* SettingsControlsTableViewCell.swift in Sources */,
+				04738CCE22FD210D0036A0B9 /* ConnectionTestViewController.swift in Sources */,
 				048057A022FC219000E70AFB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

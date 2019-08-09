@@ -30,12 +30,20 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 2 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
+    /// Nib `ConnectionLogTableViewCell`.
+    static let connectionLogTableViewCell = _R.nib._ConnectionLogTableViewCell()
     /// Nib `SettingsControlsTableViewCell`.
     static let settingsControlsTableViewCell = _R.nib._SettingsControlsTableViewCell()
     /// Nib `SettingsInputTableViewCell`.
     static let settingsInputTableViewCell = _R.nib._SettingsInputTableViewCell()
+    
+    /// `UINib(name: "ConnectionLogTableViewCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.connectionLogTableViewCell) instead")
+    static func connectionLogTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.connectionLogTableViewCell)
+    }
     
     /// `UINib(name: "SettingsControlsTableViewCell", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.settingsControlsTableViewCell) instead")
@@ -47,6 +55,10 @@ struct R: Rswift.Validatable {
     @available(*, deprecated, message: "Use UINib(resource: R.nib.settingsInputTableViewCell) instead")
     static func settingsInputTableViewCell(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.settingsInputTableViewCell)
+    }
+    
+    static func connectionLogTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ConnectionLogTableViewCell? {
+      return R.nib.connectionLogTableViewCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ConnectionLogTableViewCell
     }
     
     static func settingsControlsTableViewCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> SettingsControlsTableViewCell? {
@@ -68,14 +80,21 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
   struct storyboard {
+    /// Storyboard `ConnectionTestViewController`.
+    static let connectionTestViewController = _R.storyboard.connectionTestViewController()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
     /// Storyboard `SettingsViewController`.
     static let settingsViewController = _R.storyboard.settingsViewController()
+    
+    /// `UIStoryboard(name: "ConnectionTestViewController", bundle: ...)`
+    static func connectionTestViewController(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.connectionTestViewController)
+    }
     
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
@@ -114,6 +133,17 @@ struct _R: Rswift.Validatable {
   }
   
   struct nib {
+    struct _ConnectionLogTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "ConnectionLogTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ConnectionLogTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ConnectionLogTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _SettingsControlsTableViewCell: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "SettingsControlsTableViewCell"
@@ -141,9 +171,24 @@ struct _R: Rswift.Validatable {
   
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
+      try connectionTestViewController.validate()
       try launchScreen.validate()
       try main.validate()
       try settingsViewController.validate()
+    }
+    
+    struct connectionTestViewController: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = ConnectionTestViewController
+      
+      let bundle = R.hostingBundle
+      let name = "ConnectionTestViewController"
+      
+      static func validate() throws {
+        if #available(iOS 11.0, *) {
+        }
+      }
+      
+      fileprivate init() {}
     }
     
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {

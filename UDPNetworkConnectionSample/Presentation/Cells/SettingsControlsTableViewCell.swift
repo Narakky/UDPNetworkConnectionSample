@@ -12,7 +12,7 @@ final class SettingsControlsTableViewCell: BaseTableViewCell {
   // MARK: - Outlet
 
   @IBOutlet private weak var saveButton: UIButton!
-  
+
   // MARK: - Action
 
   /// 保存ボタンタップ時

@@ -89,7 +89,9 @@ extension ViewController: UITableViewDelegate {
     let tableData = TableData.get(indexPath: indexPath)
     switch tableData {
     case .connectionTest:
-      break
+      if let viewController = R.storyboard.connectionTestViewController().instantiateInitialViewController() {
+        navigationController?.pushViewController(viewController, animated: true)
+      }
     case .settings:
       if let viewController = R.storyboard.settingsViewController().instantiateInitialViewController() {
         navigationController?.pushViewController(viewController, animated: true)
