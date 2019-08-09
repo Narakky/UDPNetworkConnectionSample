@@ -13,17 +13,21 @@ final class SettingsControlsTableViewCell: BaseTableViewCell {
 
   @IBOutlet private weak var saveButton: UIButton!
 
+  // MARK: - Variables
+
+  weak var delegate: SettingsActionProtocol?
+
   // MARK: - Action
 
   /// 保存ボタンタップ時
   ///
   /// - Parameter sender: UIButton
   @IBAction private func saveButtonTapped(_ sender: UIButton) {
-    
+    delegate?.saveButtonTapped()
   }
 
   // MARK: - BaseTableViewCellProtocol
 
-  override func set(data: SettingsViewController.TableData) {}
+  override func set(data: SettingsViewController.TableData, values: Any?...) {}
 }
 

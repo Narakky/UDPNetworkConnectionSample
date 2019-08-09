@@ -97,7 +97,7 @@ final class ConnectionTestViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
 
-    server?.run()
+//    server?.run()
     print("Swift Echo Server Sample")
     print("Connect with a command line window by entering 'telnet ::1 \(String(describing: portNumber))'")
   }
@@ -105,7 +105,7 @@ final class ConnectionTestViewController: UIViewController {
   override func viewWillDisappear(_ animated: Bool) {
     super.viewWillDisappear(animated)
 
-    server?.shutdownServer()
+//    server?.shutdownServer()
   }
 }
 

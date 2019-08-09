@@ -9,9 +9,9 @@
 import UIKit
 
 protocol BaseTableViewCellProtocol {
-  func set(data: SettingsViewController.TableData)
+  func set(data: SettingsViewController.TableData, values: Any?...)
 }
 
 class BaseTableViewCell: UITableViewCell, BaseTableViewCellProtocol {
-  func set(data: SettingsViewController.TableData) {}
+  func set(data: SettingsViewController.TableData, values: Any?...) {}
 }
