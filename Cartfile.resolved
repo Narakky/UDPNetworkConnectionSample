@@ -1,2 +1,2 @@
-github "IBM-Swift/BlueSocket" "1.0.48"
 github "mac-cain13/R.swift.Library" "v5.0.1"
+github "swiftsocket/SwiftSocket" "2.1.0"

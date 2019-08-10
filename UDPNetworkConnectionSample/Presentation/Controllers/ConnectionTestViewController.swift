@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Socket
+import SwiftSocket
 
 final class ConnectionTestViewController: UIViewController {
   // MARK: - Definitions
@@ -76,15 +76,14 @@ final class ConnectionTestViewController: UIViewController {
 
   private var hostname: String?
   private var portNumber: Int?
-  private var server: EchoServerService?
-  private var socket: Socket?
+  private var client: UDPClient?
 
   // MARK: - Lifecycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    // Hostname, Port, Serverの初期化
+    // Hostname, Port
     hostname = UserDefaultManager.shared.get(key: .ipAddress) as? String
     setIPAddressLabel()
 
@@ -92,49 +91,27 @@ final class ConnectionTestViewController: UIViewController {
     if let portNumber = portNumber {
       self.portNumber = portNumber
       setPortNumberLabel()
-      server = EchoServerService(port: portNumber)
+    }
+
+    // Client
+    if let address = hostname, let portNumber = portNumber, let port = Int32(exactly: portNumber) {
+      client = UDPClient(address: address, port: port)
     }
   }
 
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
 
-    if let hostname = hostname, let portNumber = portNumber {
-      DispatchQueue.global().async { [weak self] in
-        guard let `self` = self else { return }
-        do {
-          self.socket = try Socket.create()
-          try self.socket?.listen(on: portNumber)
-//          try self.socket?.connect(to: hostname, port: port, timeout: 30, familyOnly: false)
-          self.changeStatus(status: .connecting)
-        } catch {
-          print("connection error occured...")
-          self.changeStatus(status: .error)
-        }
-
-        if self.socket?.isListening == true {
-          self.changeStatus(status: .success)
-        }
-      }
-    }
-
-    Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-      guard let `self` = self else { return }
-      do {
-        let message = try self.socket?.readString() ?? ""
-        print("message: \(message)")
-      } catch {
-        print("readString error...")
-      }
-    }
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy/MM/dd HH:mm:ss≥"
+    let dateString = formatter.string(from: Date())
+    let result = client?.send(string: "send string!! \(dateString)]")
   }
 
-  override func viewWillDisappear(_ animated: Bool) {
-    super.viewWillDisappear(animated)
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
 
-    DispatchQueue.global().async { [weak self] in
-      self?.socket?.close()
-    }
+    client?.close()
   }
 }
 
