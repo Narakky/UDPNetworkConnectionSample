@@ -3,25 +3,62 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04738CBD22FCFAF60036A0B9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04738CBC22FCFAF60036A0B9 /* SettingsViewController.swift */; };
+		04738CC022FCFC370036A0B9 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04738CBF22FCFC370036A0B9 /* SettingsViewController.storyboard */; };
+		04738CC422FCFF680036A0B9 /* SettingsInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04738CC322FCFF680036A0B9 /* SettingsInputTableViewCell.swift */; };
+		04738CC622FCFFD30036A0B9 /* BaseTableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04738CC522FCFFD30036A0B9 /* BaseTableViewCellProtocol.swift */; };
+		04738CC822FD00DB0036A0B9 /* SettingsInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04738CC722FD00DB0036A0B9 /* SettingsInputTableViewCell.xib */; };
+		04738CCA22FD02140036A0B9 /* SettingsControlsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04738CC922FD02140036A0B9 /* SettingsControlsTableViewCell.swift */; };
+		04738CCC22FD025B0036A0B9 /* SettingsControlsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04738CCB22FD025B0036A0B9 /* SettingsControlsTableViewCell.xib */; };
+		04738CCE22FD210D0036A0B9 /* ConnectionTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04738CCD22FD210D0036A0B9 /* ConnectionTestViewController.swift */; };
+		04738CD022FD216E0036A0B9 /* ConnectionTestViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04738CCF22FD216E0036A0B9 /* ConnectionTestViewController.storyboard */; };
+		04738CD222FD33B00036A0B9 /* ConnectionLogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04738CD122FD33B00036A0B9 /* ConnectionLogTableViewCell.swift */; };
+		04738CD422FD36120036A0B9 /* ConnectionLogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04738CD322FD36120036A0B9 /* ConnectionLogTableViewCell.xib */; };
+		04738CD722FD39FF0036A0B9 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04738CD622FD39FF0036A0B9 /* UserDefaultManager.swift */; };
+		04738CDC22FD4CFC0036A0B9 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04738CDB22FD4CFC0036A0B9 /* UIColor+.swift */; };
 		0480577B22FC069100E70AFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480577A22FC069100E70AFB /* AppDelegate.swift */; };
 		0480577D22FC069100E70AFB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480577C22FC069100E70AFB /* ViewController.swift */; };
 		0480578022FC069100E70AFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0480577E22FC069100E70AFB /* Main.storyboard */; };
 		0480578222FC069300E70AFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0480578122FC069300E70AFB /* Assets.xcassets */; };
 		0480578522FC069300E70AFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0480578322FC069300E70AFB /* LaunchScreen.storyboard */; };
+		0480579322FC1BC500E70AFB /* rswift in Resources */ = {isa = PBXBuildFile; fileRef = 0480579222FC1BC500E70AFB /* rswift */; };
+		0480579822FC1BF400E70AFB /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0480579622FC1BF400E70AFB /* Rswift.framework */; };
+		0480579C22FC1FF500E70AFB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480579B22FC1FF500E70AFB /* R.generated.swift */; };
+		048057A022FC219000E70AFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480579F22FC219000E70AFB /* Constants.swift */; };
+		F957A86222FE96C100FA4C28 /* SwiftSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F957A86122FE96C100FA4C28 /* SwiftSocket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04738CBC22FCFAF60036A0B9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		04738CBF22FCFC370036A0B9 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
+		04738CC322FCFF680036A0B9 /* SettingsInputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInputTableViewCell.swift; sourceTree = "<group>"; };
+		04738CC522FCFFD30036A0B9 /* BaseTableViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCellProtocol.swift; sourceTree = "<group>"; };
+		04738CC722FD00DB0036A0B9 /* SettingsInputTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsInputTableViewCell.xib; sourceTree = "<group>"; };
+		04738CC922FD02140036A0B9 /* SettingsControlsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsControlsTableViewCell.swift; sourceTree = "<group>"; };
+		04738CCB22FD025B0036A0B9 /* SettingsControlsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsControlsTableViewCell.xib; sourceTree = "<group>"; };
+		04738CCD22FD210D0036A0B9 /* ConnectionTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTestViewController.swift; sourceTree = "<group>"; };
+		04738CCF22FD216E0036A0B9 /* ConnectionTestViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConnectionTestViewController.storyboard; sourceTree = "<group>"; };
+		04738CD122FD33B00036A0B9 /* ConnectionLogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLogTableViewCell.swift; sourceTree = "<group>"; };
+		04738CD322FD36120036A0B9 /* ConnectionLogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectionLogTableViewCell.xib; sourceTree = "<group>"; };
+		04738CD622FD39FF0036A0B9 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		04738CDB22FD4CFC0036A0B9 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		0480577722FC069100E70AFB /* UDPNetworkConnectionSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UDPNetworkConnectionSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0480577A22FC069100E70AFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0480577C22FC069100E70AFB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0480577C22FC069100E70AFB /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
 		0480577F22FC069100E70AFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0480578122FC069300E70AFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0480578422FC069300E70AFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0480578622FC069300E70AFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0480579222FC1BC500E70AFB /* rswift */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = rswift; sourceTree = "<group>"; };
+		0480579522FC1BF400E70AFB /* Socket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Socket.framework; path = Carthage/Build/iOS/Socket.framework; sourceTree = "<group>"; };
+		0480579622FC1BF400E70AFB /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
+		0480579B22FC1FF500E70AFB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		0480579F22FC219000E70AFB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F957A86122FE96C100FA4C28 /* SwiftSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSocket.framework; path = Carthage/Build/iOS/SwiftSocket.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +66,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F957A86222FE96C100FA4C28 /* SwiftSocket.framework in Frameworks */,
+				0480579822FC1BF400E70AFB /* Rswift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04738CC222FCFF4F0036A0B9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				04738CC522FCFFD30036A0B9 /* BaseTableViewCellProtocol.swift */,
+				04738CC322FCFF680036A0B9 /* SettingsInputTableViewCell.swift */,
+				04738CC722FD00DB0036A0B9 /* SettingsInputTableViewCell.xib */,
+				04738CC922FD02140036A0B9 /* SettingsControlsTableViewCell.swift */,
+				04738CCB22FD025B0036A0B9 /* SettingsControlsTableViewCell.xib */,
+				04738CD122FD33B00036A0B9 /* ConnectionLogTableViewCell.swift */,
+				04738CD322FD36120036A0B9 /* ConnectionLogTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		04738CD522FD39E50036A0B9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				04738CD622FD39FF0036A0B9 /* UserDefaultManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		04738CD822FD409F0036A0B9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		0480576E22FC069100E70AFB = {
 			isa = PBXGroup;
 			children = (
 				0480577922FC069100E70AFB /* UDPNetworkConnectionSample */,
 				0480577822FC069100E70AFB /* Products */,
+				0480579422FC1BF400E70AFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +125,7 @@
 			children = (
 				0480578C22FC0A0A00E70AFB /* Application */,
 				0480578D22FC0A1000E70AFB /* Presentation */,
+				0480579D22FC217500E70AFB /* Util */,
 				0480579022FC0A2E00E70AFB /* Resources */,
 			);
 			path = UDPNetworkConnectionSample;
@@ -74,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				0480578E22FC0A1700E70AFB /* Controllers */,
+				04738CC222FCFF4F0036A0B9 /* Cells */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -83,6 +154,10 @@
 			children = (
 				0480577C22FC069100E70AFB /* ViewController.swift */,
 				0480577E22FC069100E70AFB /* Main.storyboard */,
+				04738CCD22FD210D0036A0B9 /* ConnectionTestViewController.swift */,
+				04738CCF22FD216E0036A0B9 /* ConnectionTestViewController.storyboard */,
+				04738CBC22FCFAF60036A0B9 /* SettingsViewController.swift */,
+				04738CBF22FCFC370036A0B9 /* SettingsViewController.storyboard */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -90,10 +165,49 @@
 		0480579022FC0A2E00E70AFB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0480579122FC1BBB00E70AFB /* Rswift */,
 				0480578122FC069300E70AFB /* Assets.xcassets */,
 				0480578322FC069300E70AFB /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		0480579122FC1BBB00E70AFB /* Rswift */ = {
+			isa = PBXGroup;
+			children = (
+				0480579B22FC1FF500E70AFB /* R.generated.swift */,
+				0480579222FC1BC500E70AFB /* rswift */,
+			);
+			path = Rswift;
+			sourceTree = "<group>";
+		};
+		0480579422FC1BF400E70AFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F957A86122FE96C100FA4C28 /* SwiftSocket.framework */,
+				0480579622FC1BF400E70AFB /* Rswift.framework */,
+				0480579522FC1BF400E70AFB /* Socket.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0480579D22FC217500E70AFB /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				0480579E22FC217F00E70AFB /* Extensions */,
+				04738CD522FD39E50036A0B9 /* Manager */,
+				04738CD822FD409F0036A0B9 /* Service */,
+				0480579F22FC219000E70AFB /* Constants.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		0480579E22FC217F00E70AFB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04738CDB22FD4CFC0036A0B9 /* UIColor+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0480578922FC069300E70AFB /* Build configuration list for PBXNativeTarget "UDPNetworkConnectionSample" */;
 			buildPhases = (
+				0480579A22FC1C6100E70AFB /* Rswift */,
 				0480577322FC069100E70AFB /* Sources */,
 				0480577422FC069100E70AFB /* Frameworks */,
 				0480577522FC069100E70AFB /* Resources */,
+				0480579922FC1BFF00E70AFB /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -155,20 +271,80 @@
 			buildActionMask = 2147483647;
 			files = (
 				0480578522FC069300E70AFB /* LaunchScreen.storyboard in Resources */,
+				04738CC822FD00DB0036A0B9 /* SettingsInputTableViewCell.xib in Resources */,
+				04738CD422FD36120036A0B9 /* ConnectionLogTableViewCell.xib in Resources */,
+				0480579322FC1BC500E70AFB /* rswift in Resources */,
+				04738CC022FCFC370036A0B9 /* SettingsViewController.storyboard in Resources */,
 				0480578222FC069300E70AFB /* Assets.xcassets in Resources */,
+				04738CD022FD216E0036A0B9 /* ConnectionTestViewController.storyboard in Resources */,
+				04738CCC22FD025B0036A0B9 /* SettingsControlsTableViewCell.xib in Resources */,
 				0480578022FC069100E70AFB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0480579922FC1BFF00E70AFB /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Rswift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftSocket.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		0480579A22FC1C6100E70AFB /* Rswift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = Rswift;
+			outputFileListPaths = (
+				"",
+			);
+			outputPaths = (
+				$SRCROOT/$PRODUCT_NAME/Resources/Rswift/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT/$PRODUCT_NAME/Resources/Rswift/rswift\" generate \"$SRCROOT/$PRODUCT_NAME/Resources/Rswift/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0480577322FC069100E70AFB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04738CC422FCFF680036A0B9 /* SettingsInputTableViewCell.swift in Sources */,
 				0480577D22FC069100E70AFB /* ViewController.swift in Sources */,
 				0480577B22FC069100E70AFB /* AppDelegate.swift in Sources */,
+				0480579C22FC1FF500E70AFB /* R.generated.swift in Sources */,
+				04738CD222FD33B00036A0B9 /* ConnectionLogTableViewCell.swift in Sources */,
+				04738CC622FCFFD30036A0B9 /* BaseTableViewCellProtocol.swift in Sources */,
+				04738CBD22FCFAF60036A0B9 /* SettingsViewController.swift in Sources */,
+				04738CD722FD39FF0036A0B9 /* UserDefaultManager.swift in Sources */,
+				04738CCA22FD02140036A0B9 /* SettingsControlsTableViewCell.swift in Sources */,
+				04738CDC22FD4CFC0036A0B9 /* UIColor+.swift in Sources */,
+				04738CCE22FD210D0036A0B9 /* ConnectionTestViewController.swift in Sources */,
+				048057A022FC219000E70AFB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +492,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/UDPNetworkConnectionSample/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -336,6 +516,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/UDPNetworkConnectionSample/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
